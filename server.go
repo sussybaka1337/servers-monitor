@@ -140,7 +140,7 @@ func details(response http.ResponseWriter, request *http.Request) {
 			if err != nil {
 				return
 			}
-			status, err := client.getServerStatus()
+			status, err := client.GetServerStatus()
 			if err != nil {
 				return
 			}
