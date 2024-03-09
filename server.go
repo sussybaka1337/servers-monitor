@@ -58,7 +58,7 @@ func (client *ClientSSH) ExecBash(bash string, background bool) (string, error) 
 	return string(buffer), nil
 }
 
-func (client *ClientSSH) getServerStatus() (*ServerStatus, error) {
+func (client *ClientSSH) GetServerStatus() (*ServerStatus, error) {
 	response, err := client.ExecBash("top -b -n 1", false)
 	if err != nil {
 		return nil, err
