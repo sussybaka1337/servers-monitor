@@ -49,7 +49,7 @@ func (client *ClientSSH) ExecBash(bash string, background bool) (string, error) 
 	}
 	defer session.Close()
 	if background {
-		bash += "screen -dm " + bash
+		bash = "screen -dm " + bash
 	}
 	buffer, err := session.CombinedOutput(bash)
 	if err != nil {
